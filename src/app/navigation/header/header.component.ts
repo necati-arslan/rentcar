@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 import {NavigateService} from '../navigate-service.service'
 
 @Component({
@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private navigateService:NavigateService,
     private elementRef:ElementRef,
-    private renderer: Renderer) { }
+    private renderer: Renderer2) { }
 
   ngOnInit() {
 

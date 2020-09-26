@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  ElementRef,
-  Renderer,
-} from "@angular/core";
+import { Component, OnInit, AfterViewInit, ElementRef, Renderer2 } from "@angular/core";
 import { NavigateService } from "../navigate-service.service";
 import * as $ from "jquery";
 
@@ -22,7 +16,7 @@ export class SidenavComponent implements OnInit {
   constructor(
     private navigateService: NavigateService,
     private elementRef: ElementRef,
-    private renderer: Renderer
+    private renderer: Renderer2
   ) {}
 
   ngOnInit() {
@@ -110,15 +104,11 @@ export class SidenavComponent implements OnInit {
         e.stopPropagation();
       });
 
-    this.globalListenFunc = this.renderer.listen(
-      "document",
-      "click",
-      (event) => {
-        // Do something with 'event'
-        console.log("dddd");
-        this.closeNav();
-      }
-    );
+    this.globalListenFunc = this.renderer.listen("document", "click", (event) => {
+    // Do something with 'event'
+    console.log("dddd");
+    this.closeNav();
+});
   }
 
   openNav() {
