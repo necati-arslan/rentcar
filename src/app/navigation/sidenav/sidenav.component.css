@@ -1,0 +1,131 @@
+/*sideMenu css*/
+.sideMenu{
+    width: 250px;
+    position: fixed;
+    overflow-x: hidden;
+    top: 60px;
+    bottom: 0px;
+    left: 0;
+    z-index: 3;
+    background-color: #fff;
+    transition: all 0.5s ease 0s;
+    box-sizing: border-box;
+}
+
+.sideMenu > .search{
+
+    padding: 30px 10px;
+
+}
+
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+#myMenu > li {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+} 
+
+#myMenu > li .arrow{
+    flex: 1 0;
+    text-align: right;
+    padding-right: 30px;
+    
+} 
+#myMenu > li .arrow i{
+    
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+} 
+.active .arrow i{
+    color: #6eb74c;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)!important;
+  }
+  
+  #myMenu > li a {
+    
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+   
+  }
+  
+  #myMenu > li a:hover {
+    background-color: #eee;
+  }
+  .dropdown-container{
+      margin-top: -10px;
+      display: none;
+  }
+
+  .dropdown-container > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-container > ul > li {
+    
+    padding-left: 15px ;
+    padding-top: 10px;
+    
+} 
+  
+.dropdown-container li a {
+    
+    text-decoration: none;
+    color: #948f8f;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+   
+  }
+  
+  #myMenu li:hover {
+    background-color: #eee;
+  }
+
+
+ 
+
+
+.sideMenu a{
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.sideMenu a:hover{
+    color: green;
+}
+.sideMenu_content{
+    padding-top: 60px;
+}
+
+.sideMenu_content a:hover, .sideMenu_content a:focus{
+    color: green;
+    background-color: #fff;
+}
+
+.sideMenu .close{
+    position: absolute;
+    font-size: 40px;
+    padding: 15px;
+    right: 5px;
+
+}
+
+/*sideMenu css*/

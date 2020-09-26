@@ -1,0 +1,163 @@
+.mainLayout{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+
+.mainLayout > .sideMenu{
+  
+    position: absolute;
+    overflow-x: hidden;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+}
+
+.sideMenu > .content{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+#myMenu > li {
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+} 
+
+#myMenu > li .arrow{
+    flex: 1 0;
+    text-align: right;
+    padding-right: 30px;
+    
+} 
+#myMenu > li .arrow i{
+    
+    -webkit-transition: 300ms ease-in-out;
+    transition: 300ms ease-in-out;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+} 
+.active .arrow i{
+    color: #6eb74c;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)!important;
+  }
+  
+  #myMenu > li a {
+    
+    text-decoration: none;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 15px;
+   
+  }
+  
+  #myMenu > li:hover {
+    background-color:white;
+    color: #2f8850;
+  }
+  #myMenu > li:hover a {
+    background-color:white;
+    color: #2f8850;
+  }
+
+
+
+/*charts*/
+
+.mainLayout > .charts{
+   margin-left: 250px;
+}
+
+.charts>.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.charts>.content>.header{
+    display: flex;
+    align-items: center;
+}
+.charts>.content>.header .buttons{
+    flex: 1 1 auto;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.cards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+ .card{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin: 0px;
+    padding: 0px;
+    width: 260px;
+    height: 130px;
+    position: relative;
+    padding: 20px 10px;
+    margin-right: 20px;
+  }
+
+  .card>.backIcon{
+    font-size: 70px;
+    position: absolute;
+    opacity: 0.3;
+    left: 10px;
+    top: 20px;
+    color: #6eb74c;
+  }
+
+   .card .mainCard{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+  }
+  .card .mainCard .iconCard{
+    color: #6eb74c;
+    font-size: 40px;
+    padding-right: 35px;
+  }
+
+  .card .mainCard>.circle{
+      margin-top: -10px;
+  }
+
+  .card .mainCard .numberMainCard{
+    flex: 1 0 auto;
+    text-align: center;
+
+  }
+
+  .card .mainCard .numberMainCard .istatik{
+      color: #6eb74c;
+  font-weight: 800;
+  font-size: 35px;
+  padding: 0px;
+  margin: 0px;
+  margin: 5px;
+  letter-spacing: 3px;
+  }
+  
+
+
+  ::ng-deep #chart {
+    height: 200px;
+}
