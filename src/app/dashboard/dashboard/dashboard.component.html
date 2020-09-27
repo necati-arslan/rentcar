@@ -1,220 +1,246 @@
-<p>dashboard works!</p>
-<div class="mainLayout">
-    <div class="sideMenu">
-        <div class="content">
-            <div>
-                <p><strong>#RT2553</strong> nolu tarife detayı</p>
+<div class="tabsDiv">
+    <ul id="tabs">
+        <li> <i  style="padding-left:10px;" class="far fa-times-circle closeAll"></i>
+        </li>
+        <li><a class="textTab" id="tab1">Offers <i style="padding-left:10px;" class="fas fa-times closeTab"></i></a>
+        </li>
+        <li><a class="textTab" id="tab2">Booklist<i style="padding-left:10px;" class="fas fa-times closeTab"></i></a>
+        </li>
+        <li><a class="textTab" id="tab3">Customer<i style="padding-left:10px;" class="fas fa-times closeTab"></i></a>
+        </li>
+        <li><a class="textTab" id="RT2553">#RT2553<i style="padding-left:10px;" class="fas fa-times closeTab"></i></a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="container" id="tab1C">Offers</div>
+<div class="container" id="tab2C">Booklist</div>
+<div class="container" id="tab3C">Customer</div>
+
+<div id="RT2553C" class=" container">
+    <div class="mainLayout ">
+        <div class="sideMenu">
+            <div class="content">
+                <div>
+                    <p><strong>#RT2553</strong> nolu tarife detayı</p>
+                </div>
+                <div class="sidebar">
+                    <ul id="myMenu">
+                        <li class="navLink dropdown-btn">
+
+                            <a href="#">Temel Bilgileri</a>
+                            <div class="arrow">
+                                <i class="fas fa-angle-right "></i>
+                            </div>
+
+                        </li>
+                        <li class="navLink ">
+
+                            <a href="#">Araç Tarifeleri</a>
+
+                        </li>
+                        <li class="navLink ">
+
+                            <a href="#">Dahil Ek Hizmetler</a>
+
+                        </li>
+
+
+                    </ul>
+                </div>
             </div>
-            <div class="sidebar">
-                <ul id="myMenu">
-                    <li class="navLink dropdown-btn">
 
-                        <a href="#">Temel Bilgileri</a>
-                        <div class="arrow">
-                            <i class="fas fa-angle-right "></i>
-                        </div>
-
-                    </li>
-                    <li class="navLink ">
-
-                        <a href="#">Araç Tarifeleri</a>
-
-                    </li>
-                    <li class="navLink ">
-
-                        <a href="#">Dahil Ek Hizmetler</a>
-
-                    </li>
-
-
-                </ul>
-            </div>
         </div>
-
-    </div>
-    <div class="charts">
-        <div class="content">
-            <div class="header">
-                <div style="color: #0d7533;">
-                    <p><strong>Tarife önizleme</strong></p>
-                </div>
-                <div class="buttons">
-                    <dx-button style="margin-right: 15px;" icon="plus" type="success" text="Yeni Tarife"></dx-button>
-                    <dx-button class="send" icon="edit" text="Düzenle" (onClick)="sendClick()">
-                    </dx-button>
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <div class="backIcon">
-                        <i class="far fa-file-alt"></i>
+        <div class="charts">
+            <div class="content">
+                <div class="header">
+                    <div style="color: #0d7533;">
+                        <p><strong>Tarife önizleme</strong></p>
                     </div>
-                    <div class="mainCard">
-                        <div class="iconCard">
+                    <div class="buttons">
+                        <dx-button style="margin-right: 15px;" icon="plus" type="success" text="Yeni Tarife">
+                        </dx-button>
+                        <dx-button class="send" icon="edit" text="Düzenle" (onClick)="sendClick()">
+                        </dx-button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="backIcon">
                             <i class="far fa-file-alt"></i>
                         </div>
-                        <div class="numberMainCard">
-                            <span><strong>Toplam kontrot sayısı</strong> </span>
-                            <p class="istatik">1.246</p>
-                            <p style="margin:0px">adet</p>
+                        <div class="mainCard">
+                            <div class="iconCard">
+                                <i class="far fa-file-alt"></i>
+                            </div>
+                            <div class="numberMainCard">
+                                <span><strong>Toplam kontrot sayısı</strong> </span>
+                                <p class="istatik">1.246</p>
+                                <p style="margin:0px">adet</p>
 
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="card">
-                    <div class="backIcon">
-                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    <div class="mainCard">
-                        <div class="iconCard">
+                    <div class="card">
+                        <div class="backIcon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <div class="numberMainCard">
-                            <span><strong>Bölge sayısı</strong> </span>
-                            <p class="istatik">17</p>
-                            <p style="margin:0px">bölge</p>
+                        <div class="mainCard">
+                            <div class="iconCard">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="numberMainCard">
+                                <span><strong>Bölge sayısı</strong> </span>
+                                <p class="istatik">17</p>
+                                <p style="margin:0px">bölge</p>
 
+                            </div>
                         </div>
+
                     </div>
-
-                </div>
-                <div class="card">
-
-                    <div class="mainCard">
-                        <div class="circle">
-                            <circle-progress [percent]="85" [radius]="40" [outerStrokeWidth]="8" [innerStrokeWidth]="0"
-                                [outerStrokeColor]="'#d53030'" [innerStrokeColor]="'#C7E596'" [animation]="true"
-                                [animationDuration]="300" [showSubtitle]="false"></circle-progress>
-                        </div>
-                        <div class="numberMainCard">
-                            <span><strong>İptal oranı</strong> </span>
-                            <p class="istatik" style="color: #d53030;">23</p>
-                            <p style="margin:0px">adet toplam iptal</p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="cards">
-                <div>
                     <div class="card">
 
                         <div class="mainCard">
                             <div class="circle">
-                                <circle-progress [percent]="12" [radius]="40" [outerStrokeWidth]="8"
-                                    [innerStrokeWidth]="0" [outerStrokeColor]="'#0771bf'" [innerStrokeColor]="'#C7E596'"
+                                <circle-progress [percent]="85" [radius]="40" [outerStrokeWidth]="8"
+                                    [innerStrokeWidth]="0" [outerStrokeColor]="'#d53030'" [innerStrokeColor]="'#C7E596'"
                                     [animation]="true" [animationDuration]="300" [showSubtitle]="false">
                                 </circle-progress>
                             </div>
                             <div class="numberMainCard">
-                                <span><strong>Upsell oranı</strong> </span>
-                                <p class="istatik" style="color: #0771bf;">8</p>
-                                <p style="margin:0px">adet toplam Upsell</p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div style="margin-top: 10px;" class="card">
-
-                        <div class="mainCard">
-                            <div class="circle">
-                                <circle-progress [percent]="60" [radius]="40" [outerStrokeWidth]="8"
-                                    [innerStrokeWidth]="0" [outerStrokeColor]="'#6eb74c'" [innerStrokeColor]="'#C7E596'"
-                                    [animation]="true" [animationDuration]="300" [showSubtitle]="false">
-                                </circle-progress>
-                            </div>
-                            <div class="numberMainCard">
-                                <span><strong>Demo oranı</strong> </span>
-                                <p class="istatik" style="color: #6eb74c;">40</p>
-                                <p style="margin:0px">adet toplam </p>
+                                <span><strong>İptal oranı</strong> </span>
+                                <p class="istatik" style="color: #d53030;">23</p>
+                                <p style="margin:0px">adet toplam iptal</p>
 
                             </div>
                         </div>
 
                     </div>
                 </div>
+                <div class="cards">
+                    <div>
+                        <div class="card">
 
-                <div style="width: 514px;margin-top: 15px;height: auto;" class="card">
-                    <div style="margin-bottom: 10px;" class="mainCard">
-                        <div>
-                            <span>Ciro </span> <span style="color: #0d7533;">Temmuz 2020</span>
-                        </div>
-                        <div>
-                            <div style="font-size:12px;color: #0d7533;">Toplam</div>
-                            <div>£12345</div>
-                        </div>
+                            <div class="mainCard">
+                                <div class="circle">
+                                    <circle-progress [percent]="12" [radius]="40" [outerStrokeWidth]="8"
+                                        [innerStrokeWidth]="0" [outerStrokeColor]="'#0771bf'"
+                                        [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"
+                                        [showSubtitle]="false">
+                                    </circle-progress>
+                                </div>
+                                <div class="numberMainCard">
+                                    <span><strong>Upsell oranı</strong> </span>
+                                    <p class="istatik" style="color: #0771bf;">8</p>
+                                    <p style="margin:0px">adet toplam Upsell</p>
 
-                    </div>
-                    <dx-chart id="chart" [dataSource]="dataSource">
-                        <dxi-series argumentField="day" valueField="oranges" name="Grafik" type="bar" color="#6eb74c">
-                        </dxi-series>
-                    </dx-chart>
-                </div>
-            </div>
-            <div class="cards">
+                                </div>
+                            </div>
 
-                <div style="margin-top: 15px;height: auto;flex:100%;padding: 5px 20px;" class="card">
-                    <div style="margin-bottom: 10px;" class="mainCard">
-                        <div>
-                             <span style="color: #0d7533;">Temmuz 2020</span>
                         </div>
-                        <div>
-                           <div style="font-size:12px;color: #0d7533;">Toplam işlem adedi</div>
-                           <div>1.800</div>
-                        </div>    
-                    </div>
-                    <dx-chart id="chart" [dataSource]="population" title="">
-                        <dxi-series argumentField="country"></dxi-series>
-                        <dxo-argument-axis>
-                            <dxo-label wordWrap="none" [overlappingBehavior]="currentMode"></dxo-label>
-                        </dxo-argument-axis>
-                        <dxo-legend [visible]="false"></dxo-legend>
-                    </dx-chart>
-                   
-                </div>
-               
-            </div>
-            <div class="cards">
-                <div style="margin-top: 15px;height: auto;flex:100%;padding: 15px 20px;" class="card">
-                    <div style="justify-content: space-between;" class="cards">
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Tarife kodu</div>
-                            <div>RTC98763</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Tarife Adı</div>
-                            <div>C Segment</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Tarife tipi</div>
-                            <div>Tek yön</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Ek süre</div>
-                            <div>3 saat</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Min kullanım</div>
-                            <div>1 gün</div>
-                        </div>
-                        <div style="text-align: center;">
-                            <div style="color: #0d7533;padding-bottom: 10px;">Max kullanım</div>
-                            <div>45 gün</div>
+                        <div style="margin-top: 10px;" class="card">
+
+                            <div class="mainCard">
+                                <div class="circle">
+                                    <circle-progress [percent]="60" [radius]="40" [outerStrokeWidth]="8"
+                                        [innerStrokeWidth]="0" [outerStrokeColor]="'#6eb74c'"
+                                        [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300"
+                                        [showSubtitle]="false">
+                                    </circle-progress>
+                                </div>
+                                <div class="numberMainCard">
+                                    <span><strong>Demo oranı</strong> </span>
+                                    <p class="istatik" style="color: #6eb74c;">40</p>
+                                    <p style="margin:0px">adet toplam </p>
+
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+
+                    <div style="width: 514px;margin-top: 15px;height: auto;" class="card">
+                        <div style="margin-bottom: 10px;" class="mainCard">
+                            <div>
+                                <span>Ciro </span> <span style="color: #0d7533;">Temmuz 2020</span>
+                            </div>
+                            <div>
+                                <div style="font-size:12px;color: #0d7533;">Toplam</div>
+                                <div>£12345</div>
+                            </div>
+
+                        </div>
+                        <dx-chart id="chart" [dataSource]="dataSource">
+                            <dxi-series argumentField="day" valueField="oranges" name="Grafik" type="bar"
+                                color="#6eb74c">
+                            </dxi-series>
+                        </dx-chart>
+                    </div>
                 </div>
+                <div class="cards">
+
+                    <div style="margin-top: 15px;height: auto;flex:100%;padding: 5px 20px;" class="card">
+                        <div style="margin-bottom: 10px;" class="mainCard">
+                            <div>
+                                <span style="color: #0d7533;">Temmuz 2020</span>
+                            </div>
+                            <div>
+                                <div style="font-size:12px;color: #0d7533;">Toplam işlem adedi</div>
+                                <div>1.800</div>
+                            </div>
+                        </div>
+                        <dx-chart id="chart" [dataSource]="population" title="">
+                            <dxi-series argumentField="country"></dxi-series>
+                            <dxo-argument-axis>
+                                <dxo-label wordWrap="none" [overlappingBehavior]="currentMode"></dxo-label>
+                            </dxo-argument-axis>
+                            <dxo-legend [visible]="false"></dxo-legend>
+                        </dx-chart>
+
+                    </div>
+
+                </div>
+                <div class="cards">
+                    <div style="margin-top: 15px;height: auto;flex:100%;padding: 15px 20px;" class="card">
+                        <div style="justify-content: space-between;" class="cards">
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Tarife kodu</div>
+                                <div>RTC98763</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Tarife Adı</div>
+                                <div>C Segment</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Tarife tipi</div>
+                                <div>Tek yön</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Ek süre</div>
+                                <div>3 saat</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Min kullanım</div>
+                                <div>1 gün</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="color: #0d7533;padding-bottom: 10px;">Max kullanım</div>
+                                <div>45 gün</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
-
-
-
 
 
         </div>
 
-
     </div>
-
 </div>
